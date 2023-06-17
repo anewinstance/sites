@@ -16,10 +16,12 @@
             if (httpRequest.readyState == 4 && httpRequest.status == 200) {
                 var bb64 = httpRequest.responseText;//获取到json字符串，还需解析
                 //console.log(bb64);
+                document.write("[")
                 document.write(btoa(btoa(bb64)));
+                document.write("]:5212")
             }
         };
-        document.write('https://3532m2z228.oicp.vip/getv6.php" frameborder="0"></iframe>')
+        document.write('" frameborder="0"></iframe>')
     </script>
 
 </body>
