@@ -15,11 +15,8 @@
             if (httpRequest.readyState == 4 && httpRequest.status == 200) {
                 var bb64 = httpRequest.responseText;//获取到json字符串，还需解析
                 //console.log(bb64);
-                document.write('<iframe width="100%" height="85%" id="m" src="http://')
-                document.write("[")
-                document.write(atob(atob(bb64)));
-                document.write("]:5212")
-                document.write('" frameborder="0"></iframe>')
+                var url="["+atob(atob(bb64))+"]:5212"
+                window.location.replace(url);
             }
         };
         
