@@ -15,7 +15,7 @@
             if (httpRequest.readyState == 4 && httpRequest.status == 200) {
                 var bb64 = httpRequest.responseText;//获取到json字符串，还需解析
                 //console.log(bb64);
-                var url="["+atob(atob(bb64))+"]:5212"
+                var url="http://["+atob(atob(bb64))+"]:5212"
                 window.location.replace(url);
             }
         };
