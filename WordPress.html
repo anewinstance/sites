@@ -1,0 +1,27 @@
+<html>
+
+<head>
+    <title>WordPress博客</title>
+</head>
+
+<body style="text-align: center;">
+    <h1 style="font-size: 44px;">WordPress博客</h1>
+    <script>
+
+        var httpRequest = new XMLHttpRequest();//第一步：建立所需的对象
+        httpRequest.open('GET', 'https://3532m2z228.oicp.vip/getv6.php', true);//第二步：打开连接  将请求参数写在url中  ps:"http://localhost:8080/rest/xxx"
+        httpRequest.send();//第三步：发送请求  将请求参数写在URL中
+        httpRequest.onreadystatechange = function () {
+            if (httpRequest.readyState == 4 && httpRequest.status == 200) {
+                var bb64 = httpRequest.responseText;//获取到json字符串，还需解析
+                //console.log(bb64);
+                var url="http://["+atob(atob(bb64))+"]:84"
+                window.location.replace(url);
+            }
+        };
+        
+    </script>
+
+</body>
+
+</html>
